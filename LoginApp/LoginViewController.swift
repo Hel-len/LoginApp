@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet var logInButton: UIButton!
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry = true
         
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         if nameTextField.text == login {
@@ -76,9 +76,9 @@ class LoginViewController: UIViewController {
         let alert = UIAlertController(title: "Your name is:", message: login, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Thank you!", style: .default, handler: nil))
         self.present(alert, animated: true)
-    
-    }
         
+    }
+    
     @IBAction func forgetPasswordButtonPushed() {
         let alert = UIAlertController(title: "Your password is:", message: password, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Thank you!", style: .default, handler: nil))
@@ -88,18 +88,18 @@ class LoginViewController: UIViewController {
     private func setGradientBackground() {
         let colorTop =  UIColor(red: 166.0/255.0, green: 59.0/255.0, blue: 227.0/255.0, alpha: 1.0).cgColor
         let colorBottom = UIColor(red: 59.0/255.0, green: 138.0/255.0, blue: 227.0/255.0, alpha: 1.0).cgColor
-                    
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = self.view.bounds
-                
+        
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     
     private func alert() {
         let alert = UIAlertController(title: "Oops! Something's go wrong!", message: "Check your name and password!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Thank you!", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
         self.present(alert, animated: true)
         
     }
