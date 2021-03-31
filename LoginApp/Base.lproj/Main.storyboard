@@ -161,19 +161,31 @@
                                     <segue destination="ns8-fz-MnX" kind="unwind" unwindAction="unwindFor:" id="Hu0-Aw-swl"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hsp-0u-sMH">
+                                <rect key="frame" x="144" y="268" width="140" height="140"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="JJd-Fw-Aqp"/>
+                                    <constraint firstAttribute="height" constant="140" id="aIA-jY-aHk"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="ultraLight"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RXW-iw-MhM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oHx-4x-8R3" firstAttribute="top" secondItem="RXW-iw-MhM" secondAttribute="top" constant="146" id="Tqy-rQ-6vr"/>
                             <constraint firstItem="RXW-iw-MhM" firstAttribute="bottom" secondItem="1e2-bv-oLh" secondAttribute="bottom" constant="50" id="Y7M-Xz-Rd2"/>
                             <constraint firstItem="oHx-4x-8R3" firstAttribute="centerX" secondItem="FDK-HM-QhU" secondAttribute="centerX" id="ax7-96-GAX"/>
+                            <constraint firstItem="hsp-0u-sMH" firstAttribute="centerX" secondItem="FDK-HM-QhU" secondAttribute="centerX" id="f6K-S4-0bj"/>
                             <constraint firstItem="1e2-bv-oLh" firstAttribute="centerX" secondItem="FDK-HM-QhU" secondAttribute="centerX" id="mt4-r0-7Tx"/>
+                            <constraint firstItem="hsp-0u-sMH" firstAttribute="top" secondItem="oHx-4x-8R3" secondAttribute="bottom" constant="30" id="uEd-eA-6Jd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lIU-3K-DGL"/>
                     <connections>
                         <outlet property="logOutButton" destination="1e2-bv-oLh" id="HHJ-YH-GHv"/>
+                        <outlet property="randomImageView" destination="hsp-0u-sMH" id="Jyj-XZ-fL6"/>
                         <outlet property="welcomeLabel" destination="oHx-4x-8R3" id="DbA-Qh-7fQ"/>
                     </connections>
                 </viewController>
