@@ -26,7 +26,6 @@ class LoginViewController: UIViewController {
         nameTextField.autocorrectionType = .no
         passwordTextField.autocorrectionType = .no
         passwordTextField.isSecureTextEntry = true
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,25 +42,21 @@ class LoginViewController: UIViewController {
             passwordTextField.text = ""
             nameTextField.text = ""
         }
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
     
-    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         nameTextField.text = ""
         passwordTextField.text = ""
     }
     
-    
     @IBAction func forgetNameButtonPushed() {
         let alert = UIAlertController(title: "Your name is:", message: login, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Thank you!", style: .default, handler: nil))
         self.present(alert, animated: true)
-        
     }
     
     @IBAction func forgetPasswordButtonPushed() {
@@ -70,7 +65,7 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    private func setGradientBackground() {
+    func setGradientBackground() {
         let colorTop =  UIColor(red: 166.0/255.0, green: 59.0/255.0, blue: 227.0/255.0, alpha: 1.0).cgColor
         let colorBottom = UIColor(red: 59.0/255.0, green: 138.0/255.0, blue: 227.0/255.0, alpha: 1.0).cgColor
         
@@ -82,15 +77,7 @@ class LoginViewController: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     
-    private func alert() {
-        let alert = UIAlertController(title: "Oops! Something went wrong!", message: "Check your name and password!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
-        self.present(alert, animated: true)
-        
-    }
-    
     func shadowTextFieldDrowing(textFieldToDrowShadow: UITextField) {
-        
         textFieldToDrowShadow.layer.cornerRadius = 10
         textFieldToDrowShadow.layer.shadowRadius = 10
         textFieldToDrowShadow.layer.shadowOffset = .zero
@@ -100,7 +87,6 @@ class LoginViewController: UIViewController {
     }
     
     func shadowButtonDrowing(buttonToDrowShadow: UIButton) {
-        
         buttonToDrowShadow.layer.cornerRadius = 10
         buttonToDrowShadow.layer.shadowRadius = 10
         buttonToDrowShadow.layer.shadowOffset = .zero
@@ -108,6 +94,13 @@ class LoginViewController: UIViewController {
         buttonToDrowShadow.layer.shadowColor = UIColor.black.cgColor
         buttonToDrowShadow.layer.shadowPath = UIBezierPath(rect: buttonToDrowShadow.bounds).cgPath
     }
+    
+    func alert() {
+        let alert = UIAlertController(title: "Oops! Something went wrong!", message: "Check your name and password!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
+    
 }
 
 
