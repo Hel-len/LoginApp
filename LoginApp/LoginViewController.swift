@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var logInButton: UIButton!
     @IBOutlet var nameTextField: UITextField!
@@ -26,6 +26,14 @@ class LoginViewController: UIViewController {
         nameTextField.autocorrectionType = .no
         passwordTextField.autocorrectionType = .no
         passwordTextField.isSecureTextEntry = true
+        
+        nameTextField.delegate = self
+        nameTextField.tag = 0
+        nameTextField.returnKeyType = .next
+        passwordTextField.delegate = self
+        passwordTextField.tag = 1
+        passwordTextField.returnKeyType = .done
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -101,6 +109,15 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+            return true;
+        }
+        return false
+    }
 }
 
 
