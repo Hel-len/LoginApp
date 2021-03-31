@@ -19,24 +19,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         setGradientBackground()
-        logInButton.layer.cornerRadius = 10
-        logInButton.layer.shadowRadius = 10
-        logInButton.layer.shadowOffset = .zero
-        logInButton.layer.shadowOpacity = 0.5
-        logInButton.layer.shadowColor = UIColor.black.cgColor
-        logInButton.layer.shadowPath = UIBezierPath(rect: logInButton.bounds).cgPath
-        
-        nameTextField.layer.shadowRadius = 10
-        nameTextField.layer.shadowOffset = .zero
-        nameTextField.layer.shadowOpacity = 0.5
-        nameTextField.layer.shadowColor = UIColor.black.cgColor
-        nameTextField.layer.shadowPath = UIBezierPath(rect: nameTextField.bounds).cgPath
-        
-        passwordTextField.layer.shadowRadius = 10
-        passwordTextField.layer.shadowOffset = .zero
-        passwordTextField.layer.shadowOpacity = 0.5
-        passwordTextField.layer.shadowColor = UIColor.black.cgColor
-        passwordTextField.layer.shadowPath = UIBezierPath(rect: passwordTextField.bounds).cgPath
+        shadowTextFieldDrowing(textFieldToDrowShadow: nameTextField)
+        shadowTextFieldDrowing(textFieldToDrowShadow: passwordTextField)
+        shadowButtonDrowing(buttonToDrowShadow: logInButton)
         
         nameTextField.autocorrectionType = .no
         passwordTextField.autocorrectionType = .no
@@ -104,6 +89,25 @@ class LoginViewController: UIViewController {
         
     }
     
+    func shadowTextFieldDrowing(textFieldToDrowShadow: UITextField) {
+        
+        textFieldToDrowShadow.layer.cornerRadius = 10
+        textFieldToDrowShadow.layer.shadowRadius = 10
+        textFieldToDrowShadow.layer.shadowOffset = .zero
+        textFieldToDrowShadow.layer.shadowOpacity = 0.5
+        textFieldToDrowShadow.layer.shadowColor = UIColor.black.cgColor
+        textFieldToDrowShadow.layer.shadowPath = UIBezierPath(rect: textFieldToDrowShadow.bounds).cgPath
+    }
+    
+    func shadowButtonDrowing(buttonToDrowShadow: UIButton) {
+        
+        buttonToDrowShadow.layer.cornerRadius = 10
+        buttonToDrowShadow.layer.shadowRadius = 10
+        buttonToDrowShadow.layer.shadowOffset = .zero
+        buttonToDrowShadow.layer.shadowOpacity = 0.5
+        buttonToDrowShadow.layer.shadowColor = UIColor.black.cgColor
+        buttonToDrowShadow.layer.shadowPath = UIBezierPath(rect: buttonToDrowShadow.bounds).cgPath
+    }
 }
 
 
