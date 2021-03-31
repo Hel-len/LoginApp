@@ -14,6 +14,7 @@
 		BF4DDD8F261338BF003D8731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4DDD8E261338BF003D8731 /* Assets.xcassets */; };
 		BF4DDD92261338BF003D8731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4DDD90261338BF003D8731 /* LaunchScreen.storyboard */; };
 		BF4DDDA4261365B7003D8731 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDDA3261365B7003D8731 /* WelcomeViewController.swift */; };
+		BF4DDDAA2614BB4F003D8731 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDDA92614BB4F003D8731 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BF4DDD91261338BF003D8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4DDD93261338BF003D8731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4DDDA3261365B7003D8731 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		BF4DDDA92614BB4F003D8731 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				BF4DDD8E261338BF003D8731 /* Assets.xcassets */,
 				BF4DDD90261338BF003D8731 /* LaunchScreen.storyboard */,
 				BF4DDD93261338BF003D8731 /* Info.plist */,
+				BF4DDDA92614BB4F003D8731 /* Helper.swift */,
 			);
 			path = LoginApp;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				BF4DDD8A261338BC003D8731 /* LoginViewController.swift in Sources */,
 				BF4DDDA4261365B7003D8731 /* WelcomeViewController.swift in Sources */,
+				BF4DDDAA2614BB4F003D8731 /* Helper.swift in Sources */,
 				BF4DDD86261338BC003D8731 /* AppDelegate.swift in Sources */,
 				BF4DDD88261338BC003D8731 /* SceneDelegate.swift in Sources */,
 			);
