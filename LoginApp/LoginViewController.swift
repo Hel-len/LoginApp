@@ -45,9 +45,9 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         if nameTextField.text == login {
             if passwordTextField.text == password {
+                guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
                 welcomeVC.name = nameTextField.text
             } else {
                 alert()
@@ -98,7 +98,7 @@ class LoginViewController: UIViewController {
     }
     
     private func alert() {
-        let alert = UIAlertController(title: "Oops! Something's go wrong!", message: "Check your name and password!", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Oops! Something went wrong!", message: "Check your name and password!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
         self.present(alert, animated: true)
         
