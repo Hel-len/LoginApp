@@ -18,14 +18,10 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         setGradientBackground()
-        welcomeLabel.text = "Welcome, " + name + "!"
+        shadowButtonDrowing(buttonToDrowShadow: logOutButton)
         
-        logOutButton.layer.cornerRadius = 10
-        logOutButton.layer.shadowRadius = 10
-        logOutButton.layer.shadowOffset = .zero
-        logOutButton.layer.shadowOpacity = 0.5
-        logOutButton.layer.shadowColor = UIColor.black.cgColor
-        logOutButton.layer.shadowPath = UIBezierPath(rect: logOutButton.bounds).cgPath
+        welcomeLabel.text = "Welcome, " + name + "!"
+      
         
     }
     
@@ -39,5 +35,14 @@ class WelcomeViewController: UIViewController {
         gradientLayer.frame = self.view.bounds
 
         self.view.layer.insertSublayer(gradientLayer, at:0)
+    }
+    
+    func shadowButtonDrowing(buttonToDrowShadow: UIButton) {
+        buttonToDrowShadow.layer.cornerRadius = 10
+        buttonToDrowShadow.layer.shadowRadius = 10
+        buttonToDrowShadow.layer.shadowOffset = .zero
+        buttonToDrowShadow.layer.shadowOpacity = 0.5
+        buttonToDrowShadow.layer.shadowColor = UIColor.black.cgColor
+        buttonToDrowShadow.layer.shadowPath = UIBezierPath(rect: buttonToDrowShadow.bounds).cgPath
     }
 }
