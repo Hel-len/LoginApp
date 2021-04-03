@@ -24,10 +24,6 @@ class LoginViewController: UIViewController {
         Helper().shadowTextFieldDrowing(textFieldToDrowShadow: nameTextField)
         Helper().shadowTextFieldDrowing(textFieldToDrowShadow: passwordTextField)
         
-        nameTextField.autocorrectionType = .no
-        passwordTextField.autocorrectionType = .no
-        passwordTextField.isSecureTextEntry = true
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,6 +66,7 @@ extension LoginViewController {
         present(alert, animated: true)
     }
 }
+
 extension LoginViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
