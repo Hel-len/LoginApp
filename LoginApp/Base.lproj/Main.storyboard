@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vmP-DR-eYP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YuC-FK-muU">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -59,7 +59,7 @@
                                                 <size key="titleShadowOffset" width="2" height="2"/>
                                                 <state key="normal" title="Log In"/>
                                                 <connections>
-                                                    <segue destination="KM7-9H-Nl7" kind="show" id="qbU-zS-5FQ"/>
+                                                    <action selector="logInPressed" destination="YuC-FK-muU" eventType="touchUpInside" id="I1t-FQ-IbG"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -80,10 +80,10 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="forgetNameButtonPushed" destination="YuC-FK-muU" eventType="touchUpInside" id="Dze-n0-UAa"/>
+                                                    <action selector="forgotRegisterData:" destination="YuC-FK-muU" eventType="touchUpInside" id="WRC-hg-tT4"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-eP-r4I">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgD-eP-r4I">
                                                 <rect key="frame" x="194" y="0.0" width="194" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,7 +91,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="forgetPasswordButtonPushed" destination="YuC-FK-muU" eventType="touchUpInside" id="p1J-HF-fNV"/>
+                                                    <action selector="forgotRegisterData:" destination="YuC-FK-muU" eventType="touchUpInside" id="tKI-iG-Xlb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -127,6 +127,7 @@
                         <outlet property="logInButton" destination="MKo-ga-rIh" id="4QN-MD-MkN"/>
                         <outlet property="nameTextField" destination="8TN-bQ-NZj" id="L4Q-XD-18g"/>
                         <outlet property="passwordTextField" destination="vdi-tv-bog" id="pBK-o3-sGx"/>
+                        <segue destination="KM7-9H-Nl7" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="1C7-8B-f1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dZ-8A-G01" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -193,23 +194,6 @@
                 <exit id="ns8-fz-MnX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3275" y="87"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7uF-eW-xMp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="vmP-DR-eYP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XLW-hl-S9l">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="YuC-FK-muU" kind="relationship" relationship="rootViewController" id="q1C-0y-Tdp"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cf2-9z-Qwv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1921" y="87"/>
         </scene>
     </scenes>
     <resources>
