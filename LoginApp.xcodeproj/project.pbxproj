@@ -11,10 +11,11 @@
 		BF4DDD88261338BC003D8731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDD87261338BC003D8731 /* SceneDelegate.swift */; };
 		BF4DDD8A261338BC003D8731 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDD89261338BC003D8731 /* LoginViewController.swift */; };
 		BF4DDD8D261338BC003D8731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4DDD8B261338BC003D8731 /* Main.storyboard */; };
-		BF4DDD8F261338BF003D8731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4DDD8E261338BF003D8731 /* Assets.xcassets */; };
 		BF4DDD92261338BF003D8731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF4DDD90261338BF003D8731 /* LaunchScreen.storyboard */; };
 		BF4DDDA4261365B7003D8731 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDDA3261365B7003D8731 /* WelcomeViewController.swift */; };
 		BF4DDDAA2614BB4F003D8731 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDDA92614BB4F003D8731 /* Helper.swift */; };
+		BF4DDDB62619B5C4003D8731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4DDDB52619B5C4003D8731 /* Assets.xcassets */; };
+		BF4DDDBC2619CFF2003D8731 /* InformationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4DDDBB2619CFF2003D8731 /* InformationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +24,12 @@
 		BF4DDD87261338BC003D8731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BF4DDD89261338BC003D8731 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BF4DDD8C261338BC003D8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BF4DDD8E261338BF003D8731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = LoginApp/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		BF4DDD91261338BF003D8731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF4DDD93261338BF003D8731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF4DDDA3261365B7003D8731 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		BF4DDDA92614BB4F003D8731 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		BF4DDDB52619B5C4003D8731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF4DDDBB2619CFF2003D8731 /* InformationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,58 @@
 		BF4DDD84261338BC003D8731 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				BF4DDD85261338BC003D8731 /* AppDelegate.swift */,
-				BF4DDD87261338BC003D8731 /* SceneDelegate.swift */,
-				BF4DDD89261338BC003D8731 /* LoginViewController.swift */,
-				BF4DDDA3261365B7003D8731 /* WelcomeViewController.swift */,
-				BF4DDD8B261338BC003D8731 /* Main.storyboard */,
-				BF4DDD8E261338BF003D8731 /* Assets.xcassets */,
-				BF4DDD90261338BF003D8731 /* LaunchScreen.storyboard */,
-				BF4DDD93261338BF003D8731 /* Info.plist */,
-				BF4DDDA92614BB4F003D8731 /* Helper.swift */,
+				BF4DDDB12619B49A003D8731 /* Models */,
+				BF4DDDAF2619AF06003D8731 /* Storyboards */,
+				BF4DDDAE2619AEF6003D8731 /* ViewControllers */,
+				BF4DDDB32619B4DB003D8731 /* Supports */,
+				BF4DDDB22619B4BE003D8731 /* Resourses */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		BF4DDDAE2619AEF6003D8731 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF4DDD89261338BC003D8731 /* LoginViewController.swift */,
+				BF4DDDA3261365B7003D8731 /* WelcomeViewController.swift */,
+				BF4DDDBB2619CFF2003D8731 /* InformationVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BF4DDDAF2619AF06003D8731 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BF4DDD8B261338BC003D8731 /* Main.storyboard */,
+				BF4DDD90261338BF003D8731 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BF4DDDB12619B49A003D8731 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BF4DDDB22619B4BE003D8731 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				BF4DDDB52619B5C4003D8731 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		BF4DDDB32619B4DB003D8731 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				BF4DDD85261338BC003D8731 /* AppDelegate.swift */,
+				BF4DDD87261338BC003D8731 /* SceneDelegate.swift */,
+				BF4DDDA92614BB4F003D8731 /* Helper.swift */,
+				BF4DDD93261338BF003D8731 /* Info.plist */,
+			);
+			path = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4DDD92261338BF003D8731 /* LaunchScreen.storyboard in Resources */,
-				BF4DDD8F261338BF003D8731 /* Assets.xcassets in Resources */,
+				BF4DDDB62619B5C4003D8731 /* Assets.xcassets in Resources */,
 				BF4DDD8D261338BC003D8731 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4DDD8A261338BC003D8731 /* LoginViewController.swift in Sources */,
+				BF4DDDBC2619CFF2003D8731 /* InformationVC.swift in Sources */,
 				BF4DDDA4261365B7003D8731 /* WelcomeViewController.swift in Sources */,
 				BF4DDDAA2614BB4F003D8731 /* Helper.swift in Sources */,
 				BF4DDD86261338BC003D8731 /* AppDelegate.swift in Sources */,
@@ -295,7 +339,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

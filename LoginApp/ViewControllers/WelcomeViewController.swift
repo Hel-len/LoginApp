@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController {
         Helper().shadowButtonDrowing(buttonToDrowShadow: logOutButton)
         randomImageView.layer.cornerRadius = 25
 
-        welcomeLabel.text = "Welcome, " + name + "!"
+//        welcomeLabel.text = "Welcome, " + name + "!"
         getRandomImage()
       
     }
