@@ -13,18 +13,17 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var logOutButton: UIButton!
     @IBOutlet var randomImageView: UIImageView!
     
-    var name: String!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        welcomeLabel.text = "Welcome, \(user.person.fullName)"
+        
         Helper().setGradientBackground(view: self)
         Helper().shadowButtonDrowing(buttonToDrowShadow: logOutButton)
         randomImageView.layer.cornerRadius = 25
-
-//        welcomeLabel.text = "Welcome, " + name + "!"
         getRandomImage()
-      
     }
     
     func getRandomImage() {
@@ -35,7 +34,5 @@ class WelcomeViewController: UIViewController {
             }
             randomImageView.image = imagesStack[Int.random(in: 0...imagesStack.count - 1)]
         }
-        
     }
-    
 }

@@ -38,6 +38,4 @@ class Helper {
         buttonToDrowShadow.layer.shadowColor = UIColor.black.cgColor
         buttonToDrowShadow.layer.shadowPath = UIBezierPath(rect: buttonToDrowShadow.bounds).cgPath
     }
-    
-    
 }

@@ -9,10 +9,14 @@ import UIKit
 
 class InformationVC:UIViewController {
     
+    var user: User!
+    
+    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var userNameLabelView: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        Helper().setGradientBackground(view: self)
-        
-    
+        userNameLabelView.text = user.person.fullName
+        userImageView.image = UIImage(named: user.person.image)
     }
 }
