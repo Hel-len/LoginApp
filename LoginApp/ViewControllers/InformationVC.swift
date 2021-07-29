@@ -16,6 +16,9 @@ class InformationVC:UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Helper().setGradientBackground(view: self)
+        
         userNameLabelView.text = user.person.fullName
         userImageView.image = UIImage(named: user.person.image)
     }
